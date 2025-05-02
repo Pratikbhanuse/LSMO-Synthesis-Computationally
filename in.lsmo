@@ -1,0 +1,17 @@
+
+units           metal
+atom_style      atomic
+read_data       lsmo.lmpdat
+
+pair_style      lj/cut 2.5
+pair_coeff      * * 1.0 1.0 2.5
+
+neighbor        0.3 bin
+neigh_modify    delay 5
+
+thermo          100
+min_style       cg
+minimize        1e-4 1e-6 100 1000
+
+write_data      lsmo_minimized.lmpdat
+        
