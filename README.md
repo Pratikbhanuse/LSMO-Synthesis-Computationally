@@ -56,7 +56,7 @@ python lsmo.py
 
 4. LAMMPS must be installed and available in your environment. If needed, modify the `run_lammps()` function in `lsmo.py` to match your LAMMPS setup.
 
-5. The output plot `xrd_lammps.png` will be saved in the current directory.
+5. The output plot `xrd_smoothed.png` will be saved in the current directory.
 
 ## Example Output
 
