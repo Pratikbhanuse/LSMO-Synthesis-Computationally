@@ -38,7 +38,7 @@ lsmo_simulation/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/lsmo_simulation.git
+git clone https://github.com/Pratikbhanuse/lsmo_simulation.git
 cd lsmo_simulation
 ```
 
@@ -51,10 +51,10 @@ pip install -r requirements.txt
 3. Run the simulation:
 
 ```bash
-python idk.py
+python lsmo.py
 ```
 
-4. LAMMPS must be installed and available in your environment. If needed, modify the `run_lammps()` function in `idk.py` to match your LAMMPS setup.
+4. LAMMPS must be installed and available in your environment. If needed, modify the `run_lammps()` function in `lsmo.py` to match your LAMMPS setup.
 
 5. The output plot `xrd_lammps.png` will be saved in the current directory.
 
