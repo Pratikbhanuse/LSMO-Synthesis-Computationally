@@ -38,7 +38,7 @@ lsmo_simulation/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Pratikbhanuse/lsmo_simulation.git
+git clone https://github.com/Pratikbhanuse/LSMO-Synthesis-Computationally.git lsmo_simulation
 cd lsmo_simulation
 ```
 
