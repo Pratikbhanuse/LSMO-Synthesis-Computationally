@@ -8,7 +8,7 @@ from pymatgen.io.lammps.data import LammpsData
 from pymatgen.analysis.diffraction.xrd import XRDCalculator
 from scipy.interpolate import interp1d
 
-n = 6  # Supercell size
+n = 4  # Supercell size
 
 # --------------------------------------------------
 # 1. Generate LSMO structure with Sr doping
@@ -86,7 +86,7 @@ def read_lammps_minimized(filename="lsmo_minimized.lmpdat"):
 # --------------------------------------------------
 # 6. XRD Plot
 # --------------------------------------------------
-def plot_smoothed_xrd(structure):
+def plot_smoothed_xrd(structure, save_path="xrd_smoothed.png"):
     xrd = XRDCalculator(wavelength="CuKa")
     pattern = xrd.get_pattern(structure)
     x, y = pattern.x, pattern.y
@@ -103,12 +103,14 @@ def plot_smoothed_xrd(structure):
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
+    plt.savefig(save_path, dpi=300)
+    print(f"[INFO] XRD plot saved as '{save_path}'")
     plt.show()
 
 # --------------------------------------------------
 # 7. Composition Pie Chart
 # --------------------------------------------------
-def plot_composition(structure):
+def plot_composition(structure, save_path="composition_pie.png"):
     counts = Counter([site.specie.symbol for site in structure])
     labels = counts.keys()
     sizes = counts.values()
@@ -118,6 +120,8 @@ def plot_composition(structure):
     plt.title("Elemental Composition (Post-Doping)")
     plt.axis('equal')
     plt.tight_layout()
+    plt.savefig(save_path, dpi=300)
+    print(f"[INFO] Composition pie chart saved as '{save_path}'")
     plt.show()
 
 # --------------------------------------------------
