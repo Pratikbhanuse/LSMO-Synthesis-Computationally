@@ -60,7 +60,7 @@ python lsmo.py
 
 ## Example Output
 
-![XRD Plot](xrd_lammps.png)
+![XRD Plot](xrd_smoothed.png)
 
 ## License
 
